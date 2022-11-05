@@ -1,5 +1,5 @@
-const fs = require("fs");     // import File System module
-const http = require("http"); // import HTTP Networking module
+import fs from "fs";     // import File System module
+import http from "http"; // import HTTP Networking module
 
 console.log("Hello Node!");
 // console.log(window);    // not available in Node
