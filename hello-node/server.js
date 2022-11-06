@@ -1,8 +1,13 @@
-import fs from "fs";     // import File System module
-import http from "http"; // import HTTP Networking module
+import http from "http";
 
-console.log("Hello Node!");
-// console.log(window);    // not available in Node
-// console.log(document);  // not available in Node
-console.log(fs);
-console.log(http);
+const port = 3000;
+
+const server = http.createServer((req, res) => {
+  res.statusCode = 200;
+  res.setHeader("Content-Type", "text/plain");
+  res.end("Hello Node\n");
+});
+
+server.listen(port, () => {
+  console.log(`Server running at http://localhost:${port}/`);
+});
